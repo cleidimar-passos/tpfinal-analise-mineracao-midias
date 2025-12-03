@@ -116,7 +116,7 @@ pip install -r requirements.txt
 
 ## 📄 Artigo Científico
 
-O artigo gerado a partir destas análises (`artigo_final.tex`) está disponível na raiz do projeto.
+O artigo gerado a partir destas análises (`tpfinal_mineracao_artigo.pdf`) está disponível na raiz do projeto.
 
 ---
 
