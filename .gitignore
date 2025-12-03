@@ -1,0 +1,12 @@
+# Ignorar dados brutos pesados
+dados_oficiais/
+*.csv
+
+# Mas NÃO ignorar os arquivos processados pequenos (se quiser manter os resultados)
+!dados_investimentos_geral.csv
+!dados_investimentos_hob.csv
+!dados_limpos_upas.csv
+!resultados_nlp/*.csvdados_oficiais/*.csv
+dados_oficiais/*.csv
+dados_oficiais/*.csv
+backup dados/*.csv

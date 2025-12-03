@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_154955d53d187270232b7fcb4562e3e2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_154955d53d187270232b7fcb4562e3e2" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_154955d53d187270232b7fcb4562e3e2 = L.map(
+                "map_154955d53d187270232b7fcb4562e3e2",
+                {
+                    center: [-19.916681, -43.934493],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d7ff64a8937c9b2352c084c3d6caf26e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d7ff64a8937c9b2352c084c3d6caf26e.addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var marker_c32f5e595b511fa8db4a9a7144dbea27 = L.marker(
+                [-19.9044341, -43.9504307],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_b142606490c59fab28de8705e7e6bbbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b2a85a207029789c06e1a7cecc2394c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_947514e6304a7571ff4c55de0c6d25ae = $(`<div id="html_947514e6304a7571ff4c55de0c6d25ae" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>Hosp. Odilon Behrens</h4>             <p><b>Nota Média:</b> 2.29 ⭐</p>             <p><b>Total Avaliações:</b> 528</p>         </div>         </div>`)[0];
+                popup_6b2a85a207029789c06e1a7cecc2394c.setContent(html_947514e6304a7571ff4c55de0c6d25ae);
+            
+        
+
+        marker_c32f5e595b511fa8db4a9a7144dbea27.bindPopup(popup_6b2a85a207029789c06e1a7cecc2394c)
+        ;
+
+        
+    
+    
+            marker_c32f5e595b511fa8db4a9a7144dbea27.bindTooltip(
+                `<div>
+                     Hosp. Odilon Behrens (2.3⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c32f5e595b511fa8db4a9a7144dbea27.setIcon(icon_b142606490c59fab28de8705e7e6bbbf);
+            
+    
+            var marker_f2c5dc227ef112ad34ff50ca2e65a12a = L.marker(
+                [-19.9793418, -44.0319955],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_8a89eebd560c753f005201330178d63d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b421897a9de516f577fb931de318e25 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8c8bfc692d42ef4b5e32e9d97c341d39 = $(`<div id="html_8c8bfc692d42ef4b5e32e9d97c341d39" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Barreiro</h4>             <p><b>Nota Média:</b> 2.39 ⭐</p>             <p><b>Total Avaliações:</b> 714</p>         </div>         </div>`)[0];
+                popup_3b421897a9de516f577fb931de318e25.setContent(html_8c8bfc692d42ef4b5e32e9d97c341d39);
+            
+        
+
+        marker_f2c5dc227ef112ad34ff50ca2e65a12a.bindPopup(popup_3b421897a9de516f577fb931de318e25)
+        ;
+
+        
+    
+    
+            marker_f2c5dc227ef112ad34ff50ca2e65a12a.bindTooltip(
+                `<div>
+                     UPA Barreiro (2.4⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f2c5dc227ef112ad34ff50ca2e65a12a.setIcon(icon_8a89eebd560c753f005201330178d63d);
+            
+    
+            var marker_3cdde5b7c8750e07c6a9af803d18536e = L.marker(
+                [-19.9221242, -43.9281276],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_819a7aca82457639f4589f9672c022e1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23092d789fe502f9522c5caacc9e272d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bc10d747443ff873e1e136d46adaf55d = $(`<div id="html_bc10d747443ff873e1e136d46adaf55d" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Centro-Sul</h4>             <p><b>Nota Média:</b> 2.47 ⭐</p>             <p><b>Total Avaliações:</b> 864</p>         </div>         </div>`)[0];
+                popup_23092d789fe502f9522c5caacc9e272d.setContent(html_bc10d747443ff873e1e136d46adaf55d);
+            
+        
+
+        marker_3cdde5b7c8750e07c6a9af803d18536e.bindPopup(popup_23092d789fe502f9522c5caacc9e272d)
+        ;
+
+        
+    
+    
+            marker_3cdde5b7c8750e07c6a9af803d18536e.bindTooltip(
+                `<div>
+                     UPA Centro-Sul (2.5⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cdde5b7c8750e07c6a9af803d18536e.setIcon(icon_819a7aca82457639f4589f9672c022e1);
+            
+    
+            var marker_b81447e4de278c50ddf55044542f68ee = L.marker(
+                [-19.9056924, -43.8994673],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_d2d316ecb037d1337b75d2f10f9080f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df40772cb6dbdfe25827a5ccec996542 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b1b84d44033c8240505c174eefefaf83 = $(`<div id="html_b1b84d44033c8240505c174eefefaf83" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Leste</h4>             <p><b>Nota Média:</b> 2.81 ⭐</p>             <p><b>Total Avaliações:</b> 676</p>         </div>         </div>`)[0];
+                popup_df40772cb6dbdfe25827a5ccec996542.setContent(html_b1b84d44033c8240505c174eefefaf83);
+            
+        
+
+        marker_b81447e4de278c50ddf55044542f68ee.bindPopup(popup_df40772cb6dbdfe25827a5ccec996542)
+        ;
+
+        
+    
+    
+            marker_b81447e4de278c50ddf55044542f68ee.bindTooltip(
+                `<div>
+                     UPA Leste (2.8⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b81447e4de278c50ddf55044542f68ee.setIcon(icon_d2d316ecb037d1337b75d2f10f9080f4);
+            
+    
+            var marker_efc97081a84dd51ddd4b762b52f8daa0 = L.marker(
+                [-19.8664867, -43.9282931],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_b40f1a5b6e83607f39f0b420357b3c07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6ca96e1bb12b48d9e99a5a6e1cfe2a4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cfa85776ce65508458efcc33100c0663 = $(`<div id="html_cfa85776ce65508458efcc33100c0663" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Nordeste</h4>             <p><b>Nota Média:</b> 3.12 ⭐</p>             <p><b>Total Avaliações:</b> 352</p>         </div>         </div>`)[0];
+                popup_f6ca96e1bb12b48d9e99a5a6e1cfe2a4.setContent(html_cfa85776ce65508458efcc33100c0663);
+            
+        
+
+        marker_efc97081a84dd51ddd4b762b52f8daa0.bindPopup(popup_f6ca96e1bb12b48d9e99a5a6e1cfe2a4)
+        ;
+
+        
+    
+    
+            marker_efc97081a84dd51ddd4b762b52f8daa0.bindTooltip(
+                `<div>
+                     UPA Nordeste (3.1⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_efc97081a84dd51ddd4b762b52f8daa0.setIcon(icon_b40f1a5b6e83607f39f0b420357b3c07);
+            
+    
+            var marker_ea05bc36b0097affeccf6f310f35b524 = L.marker(
+                [-19.9044341, -43.9504307],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_9b93f3c39f71cdca9dda10bfbf07fb20 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ed2ea2ef4b177680c50d7750177cb59 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9b17f2d697a4de069e6128bb202daf4e = $(`<div id="html_9b17f2d697a4de069e6128bb202daf4e" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Noroeste</h4>             <p><b>Nota Média:</b> 2.49 ⭐</p>             <p><b>Total Avaliações:</b> 94</p>         </div>         </div>`)[0];
+                popup_1ed2ea2ef4b177680c50d7750177cb59.setContent(html_9b17f2d697a4de069e6128bb202daf4e);
+            
+        
+
+        marker_ea05bc36b0097affeccf6f310f35b524.bindPopup(popup_1ed2ea2ef4b177680c50d7750177cb59)
+        ;
+
+        
+    
+    
+            marker_ea05bc36b0097affeccf6f310f35b524.bindTooltip(
+                `<div>
+                     UPA Noroeste (2.5⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea05bc36b0097affeccf6f310f35b524.setIcon(icon_9b93f3c39f71cdca9dda10bfbf07fb20);
+            
+    
+            var marker_9747851c61b10cd4683a2af54d4a8f52 = L.marker(
+                [-19.8456559, -43.9170806],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_b80497fac4d6433555311ea441a42619 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "exclamation-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94a5b0ea1f354157679a10c812784fee = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a3f9b10bb175490b8e7d0757e28d2d3e = $(`<div id="html_a3f9b10bb175490b8e7d0757e28d2d3e" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Norte</h4>             <p><b>Nota Média:</b> 2.81 ⭐</p>             <p><b>Total Avaliações:</b> 722</p>         </div>         </div>`)[0];
+                popup_94a5b0ea1f354157679a10c812784fee.setContent(html_a3f9b10bb175490b8e7d0757e28d2d3e);
+            
+        
+
+        marker_9747851c61b10cd4683a2af54d4a8f52.bindPopup(popup_94a5b0ea1f354157679a10c812784fee)
+        ;
+
+        
+    
+    
+            marker_9747851c61b10cd4683a2af54d4a8f52.bindTooltip(
+                `<div>
+                     UPA Norte (2.8⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9747851c61b10cd4683a2af54d4a8f52.setIcon(icon_b80497fac4d6433555311ea441a42619);
+            
+    
+            var marker_6a07b524f0d83594856aa2c4959e383e = L.marker(
+                [-19.9511764, -43.970977],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_16f2743b97e7ae0a2ee321a0f36c7a39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d75afa2ffe6916318110885e693a20e4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c5c3667c16e1bfde511f79d6fcbcc64d = $(`<div id="html_c5c3667c16e1bfde511f79d6fcbcc64d" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Oeste</h4>             <p><b>Nota Média:</b> 2.37 ⭐</p>             <p><b>Total Avaliações:</b> 714</p>         </div>         </div>`)[0];
+                popup_d75afa2ffe6916318110885e693a20e4.setContent(html_c5c3667c16e1bfde511f79d6fcbcc64d);
+            
+        
+
+        marker_6a07b524f0d83594856aa2c4959e383e.bindPopup(popup_d75afa2ffe6916318110885e693a20e4)
+        ;
+
+        
+    
+    
+            marker_6a07b524f0d83594856aa2c4959e383e.bindTooltip(
+                `<div>
+                     UPA Oeste (2.4⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a07b524f0d83594856aa2c4959e383e.setIcon(icon_16f2743b97e7ae0a2ee321a0f36c7a39);
+            
+    
+            var marker_e7e4544cba3ce3bd46e63cae32a1a1df = L.marker(
+                [-19.8705858, -44.0039212],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_30ae147d1138ceb2258598ea1696ec78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6a5cdd7c364a2b9f5f440abce2a190d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_2366c6881214f185cf566a804cf158c8 = $(`<div id="html_2366c6881214f185cf566a804cf158c8" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Pampulha</h4>             <p><b>Nota Média:</b> 2.39 ⭐</p>             <p><b>Total Avaliações:</b> 738</p>         </div>         </div>`)[0];
+                popup_e6a5cdd7c364a2b9f5f440abce2a190d.setContent(html_2366c6881214f185cf566a804cf158c8);
+            
+        
+
+        marker_e7e4544cba3ce3bd46e63cae32a1a1df.bindPopup(popup_e6a5cdd7c364a2b9f5f440abce2a190d)
+        ;
+
+        
+    
+    
+            marker_e7e4544cba3ce3bd46e63cae32a1a1df.bindTooltip(
+                `<div>
+                     UPA Pampulha (2.4⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e7e4544cba3ce3bd46e63cae32a1a1df.setIcon(icon_30ae147d1138ceb2258598ea1696ec78);
+            
+    
+            var marker_ce71c62e6c57b4b9cb0c862f876b4a41 = L.marker(
+                [-19.8201638, -43.9560789],
+                {
+}
+            ).addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+    
+            var icon_efb1c1841767a8971ebbcead6121e7b7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "thumbs-down",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49924a10bf143a9129e47573df84d3a8 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d829befb3785bd5fed966f439dcd1377 = $(`<div id="html_d829befb3785bd5fed966f439dcd1377" style="width: 100.0%; height: 100.0%;">         <div style="width:200px">             <h4>UPA Venda Nova</h4>             <p><b>Nota Média:</b> 2.10 ⭐</p>             <p><b>Total Avaliações:</b> 744</p>         </div>         </div>`)[0];
+                popup_49924a10bf143a9129e47573df84d3a8.setContent(html_d829befb3785bd5fed966f439dcd1377);
+            
+        
+
+        marker_ce71c62e6c57b4b9cb0c862f876b4a41.bindPopup(popup_49924a10bf143a9129e47573df84d3a8)
+        ;
+
+        
+    
+    
+            marker_ce71c62e6c57b4b9cb0c862f876b4a41.bindTooltip(
+                `<div>
+                     UPA Venda Nova (2.1⭐)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce71c62e6c57b4b9cb0c862f876b4a41.setIcon(icon_efb1c1841767a8971ebbcead6121e7b7);
+            
+    
+            var heat_map_6475e012451a730202717fe6f059b8a3 = L.heatLayer(
+                [[-19.9044341, -43.9504307, 1430.0], [-19.9793418, -44.0319955, 1864.0], [-19.9221242, -43.9281276, 2184.0], [-19.9056924, -43.8994673, 1478.0], [-19.8664867, -43.9282931, 662.0], [-19.9044341, -43.9504307, 236.0], [-19.8456559, -43.9170806, 1580.0], [-19.9511764, -43.970977, 1878.0], [-19.8705858, -44.0039212, 1924.0000000000002], [-19.8201638, -43.9560789, 2160.0]],
+                {
+  "minOpacity": 0.5,
+  "maxZoom": 10,
+  "radius": 25,
+  "blur": 15,
+}
+            );
+        
+    
+            heat_map_6475e012451a730202717fe6f059b8a3.addTo(map_154955d53d187270232b7fcb4562e3e2);
+        
+</script>
+</html>

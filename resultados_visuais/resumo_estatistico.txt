@@ -1,0 +1,41 @@
+==================================================
+RELATÓRIO FINAL: PERCEPÇÃO DA SAÚDE PÚBLICA (BH)
+==================================================
+
+1. ESTATÍSTICAS GERAIS DO SISTEMA
+- Total de Avaliações Coletadas: 6146
+- NOTA MÉDIA GERAL (Histórica): 2.49 / 5.00
+- Nota Mediana: 1.0 (A nota 'do meio')
+
+2. SENTIMENTO DO CIDADÃO
+- Insatisfeitos (Nota 1-2): 3548 (57.7%)
+- Satisfeitos (Nota 4-5):   2060 (33.5%)
+- Neutros (Nota 3):         538  (8.8%)
+
+3. EVOLUÇÃO TEMPORAL (A Queda/Melhora)
+- 2012: Média 2.5 ⭐ (4 reviews)
+- 2013: Média 3.12 ⭐ (16 reviews)
+- 2014: Média 3.44 ⭐ (18 reviews)
+- 2015: Média 3.52 ⭐ (42 reviews)
+- 2016: Média 3.09 ⭐ (136 reviews)
+- 2017: Média 3.04 ⭐ (324 reviews)
+- 2018: Média 3.06 ⭐ (310 reviews)
+- 2019: Média 2.51 ⭐ (320 reviews)
+- 2020: Média 2.46 ⭐ (390 reviews)
+- 2021: Média 2.44 ⭐ (670 reviews)
+- 2022: Média 2.4 ⭐ (824 reviews)
+- 2023: Média 2.37 ⭐ (956 reviews)
+- 2024: Média 2.41 ⭐ (1222 reviews)
+- 2025: Média 2.33 ⭐ (914 reviews)
+
+4. RANKING FINAL (Melhores e Piores)
+- UPA Nordeste: 3.12
+- UPA Leste: 2.81
+- UPA Norte: 2.81
+- UPA Noroeste: 2.49
+- UPA Centro-Sul: 2.47
+- UPA Pampulha: 2.39
+- UPA Barreiro: 2.39
+- UPA Oeste: 2.37
+- Hosp. Odilon Behrens: 2.29
+- UPA Venda Nova: 2.10
