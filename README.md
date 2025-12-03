@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 #### A) Dados Financeiros (PBH - Obrigatório)
 
-1. Baixe manualmente os arquivos de "Despesas Orçamentárias" (2020–2025) no [Portal de Dados Abertos da PBH](http://dados.pbh.gov.br/).
+1. Baixe manualmente os arquivos de "Despesas Orçamentárias" (2020–2025) no [Portal de Dados Abertos da PBH](https://dados.pbh.gov.br/dataset/despesas-orcamentarias/resource/34739965-f23a-4728-9e1b-aee623e8ff9b?view_id=3549569e-777d-4d93-8b70-cf25ef2bfcc5&filters=FUNCAO%3A10%2520-%2520Sa%25C3%25BAde%7CFUNCAO%3A10%2520-%2520SA%25C3%259ADE).
 2. Crie a pasta `dados_oficiais` na raiz do projeto e coloque todos os arquivos CSV lá.
 3. Execute:
    ```sh
