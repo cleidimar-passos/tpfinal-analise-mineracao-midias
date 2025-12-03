@@ -1,84 +1,90 @@
-Análise da Percepção Pública e Eficácia dos Investimentos na Saúde de Belo Horizonte
+# 🏥 Análise da Percepção Pública e Eficácia dos Investimentos na Saúde de Belo Horizonte
 
-Este repositório contém o código fonte e a documentação do trabalho final da disciplina de Mineração em Redes Sociais. O projeto analisa a correlação entre a satisfação dos usuários (via Google Maps) e os investimentos financeiros nas Unidades de Pronto Atendimento (UPAs) de Belo Horizonte.
+> **Trabalho final da disciplina de Mineração em Redes Sociais**  
+> Universidade Federal de Viçosa (UFV) | Autor: Cleidimar Lacerda dos Passos  
+> Contato: [cleidimar.passos@ufv.br](mailto:cleidimar.passos@ufv.br)
 
-⚠️ Aviso Importante sobre os Dados
+---
 
-Devido às restrições de armazenamento do GitHub (limite de 100MB por arquivo), os datasets brutos não foram incluídos neste repositório.
+## 📊 Sobre o Projeto
 
-Isso afeta principalmente:
+Explora-se a correlação entre a satisfação do cidadão (avaliações do Google Maps das UPAs de BH) e o volume dos investimentos públicos em saúde. Utiliza técnicas de **Web Scraping** e **PLN** para analisar mais de **6.000 reviews** e dados oficiais da PBH (2020–2025).
 
-Dados Oficiais de Despesas: Os arquivos CSV baixados do Portal de Dados Abertos da PBH (anos 2020-2025) excedem o tamanho permitido.
+---
 
-Backup de Coletas: Alguns arquivos intermediários de scraping também foram excluídos.
+## ✨ Principais Funcionalidades
 
-Como obter os dados?
+- **🤖 Scraper Automatizado:**  
+  Coleta automática de reviews, notas e datas das UPAs utilizando Selenium.
 
-O projeto foi desenhado para ser reprodutível. Você pode obter os dados das seguintes formas:
+- **📈 Análise de Sentimentos:**  
+  Processamento de texto e identificação de tópicos frequentes via N-grams.
 
-Dados Financeiros: Utilize os links oficiais indicados no código ou acesse diretamente o Portal de Dados Abertos da PBH e baixe os arquivos de "Despesas Orçamentárias" para os anos desejados.
+- **💰 Correlação Financeira Temporal:**  
+  Relacionamento entre nota média mensal dos atendimentos e execução orçamentária das unidades.
 
-Dados de Avaliações: Execute o script de scraping incluído no projeto para realizar uma nova coleta atualizada diretamente do Google Maps.
+---
 
-📋 Sobre o Projeto
+## 🛠️ Tecnologias Utilizadas
 
-O estudo utiliza técnicas de Web Scraping e Processamento de Linguagem Natural (PLN) para coletar e analisar mais de 6.000 avaliações de cidadãos. O objetivo é investigar se o aumento nos repasses financeiros para a saúde resulta em uma percepção de melhora imediata na qualidade do serviço.
+- `Python 3.x`
+- `Selenium` (coleta de dados)
+- `Pandas` (manipulação)
+- `Matplotlib` & `Seaborn` (visualização)
+- `LaTeX` (escrita do artigo)
 
-Principais Funcionalidades
+---
 
-Scraper Automatizado: Coleta reviews, notas e datas das UPAs usando Selenium.
+## 🚀 Como Executar
 
-Análise de Sentimentos: Processamento de texto para identificar tópicos frequentes (N-Grams).
+1. **Clone o repositório**
+    ```bash
+    git clone https://github.com/cleidimar-passos/tpfinal-analise-mineracao-midias.git
+    cd tpfinal-analise-mineracao-midias
+    ```
 
-Correlação Financeira: Cruzamento temporal entre a nota média mensal e a execução de despesas.
+2. **Instale as dependências**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    <sub>*Necessário ter ChromeDriver instalado e configurado no PATH para uso com Selenium*</sub>
 
-🛠️ Tecnologias Utilizadas
+3. **Execute a coleta de dados (opcional)**
+    ```bash
+    python src/coleta_reviews.py
+    ```
 
-Python 3.x
+4. **Execute as análises**
+    ```bash
+    python src/analise_dados.py
+    ```
 
-Selenium (Coleta de dados)
+---
 
-Pandas (Manipulação de dados)
+## ⚠️ Aviso Importante sobre os Dados
 
-Matplotlib & Seaborn (Visualização)
+> **Os datasets brutos NÃO estão incluídos no repositório devido à limitação de 100MB por arquivo do GitHub.**
 
-LaTeX (Escrita do artigo)
+- **Fontes oficiais das despesas**: Baixe manualmente no [Portal de Dados Abertos da PBH](https://dados.pbh.gov.br/) os arquivos de "Despesas Orçamentárias" (2020–2025).
+- **Avaliações do Google Maps**: Gere com o scraping fornecido (`src/coleta_reviews.py`).
+- **Arquivos intermediários de scraping**: Não adicionados para manter o repositório leve.
 
-🚀 Como Executar
+O projeto é totalmente reprodutível se as orientações acima forem seguidas.
 
-Clone o repositório:
+---
 
-git clone [https://github.com/cleidimar-passos/tpfinal-analise-mineracao-midias.git](https://github.com/cleidimar-passos/tpfinal-analise-mineracao-midias.git)
-cd tpfinal-analise-mineracao-midias
+## 📄 Artigo Científico
 
+O artigo gerado a partir destas análises está disponível na raiz do projeto (`main.pdf`) ou pode ser compilado manualmente a partir do arquivo `.tex`.
 
-Instale as dependências:
+---
 
-pip install -r requirements.txt
+## 👨‍💻 Autor
 
+- **Cleidimar Lacerda dos Passos**
+- Universidade Federal de Viçosa (UFV)
+- [cleidimar.passos@ufv.br](mailto:cleidimar.passos@ufv.br)
 
-(Certifique-se de ter o WebDriver do Chrome instalado e configurado no PATH para o Selenium).
+<sub>Projeto acadêmico • Dados públicos • Uso exclusivamente educacional</sub>
 
-Execute a coleta (opcional se já tiver os dados):
-
-python src/coleta_reviews.py
-
-
-Execute a análise:
-
-python src/analise_dados.py
-
-
-📄 Artigo
-
-O artigo completo gerado a partir desta análise encontra-se na pasta raiz ou pode ser compilado a partir do arquivo .tex fornecido.
-
-👤 Autor
-
-Cleidimar Lacerda dos Passos
-
-Universidade Federal de Viçosa (UFV)
-
-Contato: cleidimar.passos@ufv.br
-
-Este projeto é de cunho acadêmico e utiliza dados públicos.
+---
