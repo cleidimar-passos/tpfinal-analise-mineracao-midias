@@ -109,6 +109,8 @@ pip install -r requirements.txt
 - Os datasets brutos originais da PBH **NÃO estão incluídos** devido à limitação de 100MB por arquivo do GitHub.
 - O projeto é totalmente reprodutível se os dados oficiais forem baixados conforme as instruções.
 - Os arquivos intermediários e finais (CSVs leves) **estão inclusos** no repositório.
+- No pdf do grafo de palavras, em vermelho estão as relações da palavra "esperando".
+- O grafo de palavras pode ser visualizado na ferramenta gephi incluindo o arquivo *gephi_arestas.csv* na pasta resultados_nlp.
 
 ---
 
