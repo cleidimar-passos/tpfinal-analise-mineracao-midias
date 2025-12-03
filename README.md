@@ -1,144 +1,127 @@
-🏥 Análise da Percepção Pública e Eficácia dos Investimentos na Saúde de Belo Horizonte
+# 🏥 Análise da Percepção Pública e Eficácia dos Investimentos na Saúde de Belo Horizonte
 
-Trabalho final da disciplina de Mineração em Redes Sociais
-Universidade Federal de Viçosa (UFV) | Autor: Cleidimar Lacerda dos Passos
-Contato: cleidimar.passos@ufv.br
+> **Trabalho final da disciplina de Mineração em Redes Sociais**  
+> Universidade Federal de Viçosa (UFV)  
+> **Autor:** [Cleidimar Lacerda dos Passos](mailto:cleidimar.passos@ufv.br)
 
-📊 Sobre o Projeto
+---
 
-Este projeto explora a correlação entre a satisfação do cidadão (avaliações do Google Maps das UPAs de BH) e o volume dos investimentos públicos em saúde. Utilizamos técnicas de Web Scraping e PLN para analisar mais de 6.000 reviews e dados oficiais da PBH (2020–2025). O trabalho visa diagnosticar a eficácia do gasto público.
+## 📊 Sobre o Projeto
 
-✨ Principais Funcionalidades (Scripts Chave)
+Este projeto explora **a correlação entre a satisfação dos cidadãos nas UPAs de BH (avaliada via Google Maps)** e **o volume dos investimentos públicos em saúde**. Aplicamos técnicas de web scraping, processamento de dados financeiros e análises em NLP.
 
-scraper_engine.py: Coleta automática de reviews, notas e datas das UPAs (Scraping).
+---
 
-preparar_dados_reais.py: Processa e filtra os grandes arquivos de despesas da PBH (ETL Financeiro).
+## ✨ Principais Funcionalidades
 
-analise_nlp.py: Processamento de texto, N-grams e Modelagem de Tópicos (LDA).
+| Script                  | Descrição                                                                                      |
+|-------------------------|-----------------------------------------------------------------------------------------------|
+| `scraper_engine.py`     | Coleta automática de reviews, notas e datas das UPAs (Scraping)                               |
+| `preparar_dados_reais.py` | Processa e filtra grandes arquivos de despesas da PBH (ETL Financeiro)                      |
+| `analise_nlp.py`        | Processamento de texto, N-grams e Modelagem de Tópicos (LDA)                                  |
+| `analise_correlacao.py` | Geração de gráficos de correlação temporal (Nota vs. Execução Orçamentária)                   |
 
-analise_correlacao.py: Geração de gráficos de correlação temporal (Nota vs. Execução Orçamentária).
+---
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-Python 3.x
+- **Python 3.x**
+- [Selenium](https://selenium.dev/) (coleta de dados)
+- [Pandas](https://pandas.pydata.org/) (manipulação e limpeza)
+- [Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/) (visualização)
+- [Scikit-learn](https://scikit-learn.org/) & [NLTK](https://www.nltk.org/) (NLP e Modelagem)
 
-Selenium (coleta de dados)
+---
 
-Pandas (manipulação e limpeza)
+## 🚀 Como Reproduzir os Resultados
 
-Matplotlib & Seaborn (visualização)
+### 0️⃣ Configuração Inicial
 
-Scikit-learn & NLTK (NLP e Modelagem)
-
-🚀 Como Reproduzir os Resultados (Passo a Passo)
-
-Etapa 0: Configuração Inicial
-
-Clone o repositório:
-
-git clone [https://github.com/cleidimar-passos/tpfinal-analise-mineracao-midias.git](https://github.com/cleidimar-passos/tpfinal-analise-mineracao-midias.git)
+```sh
+# Clone o repositório
+git clone https://github.com/cleidimar-passos/tpfinal-analise-mineracao-midias.git
 cd tpfinal-analise-mineracao-midias
 
-
-
-
-Instale as dependências:
-
+# Instale as dependências
 pip install -r requirements.txt
+```
+> ⚠️ **Atenção:** O Selenium requer um Chrome/Edge Driver compatível.
 
+---
 
+### 1️⃣ Obtenção e Preparação de Dados
 
+#### A) Dados Financeiros (PBH - Obrigatório)
 
-<sub>Atenção: O Selenium requer um Chrome/Edge Driver compatível.</sub>
+1. Baixe manualmente os arquivos de "Despesas Orçamentárias" (2020–2025) no [Portal de Dados Abertos da PBH](http://dados.pbh.gov.br/).
+2. Crie a pasta `dados_oficiais` na raiz do projeto e coloque todos os arquivos CSV lá.
+3. Execute:
+   ```sh
+   python preparar_dados_reais.py
+   ```
+   - **Saída:** `dados_investimentos_geral.csv` e `dados_investimentos_hob.csv`
 
-Etapa 1: Obtenção e Preparação de Dados
+#### B) Dados de Reviews (Google Maps)
 
-A. Dados Financeiros (Oficiais da PBH - Obrigatório):
+1. Execute o script de coleta:
+   ```sh
+   python scraper_engine.py
+   ```
+2. Limpeza e processamento de datas (NLP básico):
+   ```sh
+   python processamento.py
+   ```
+   - **Saída:** `dados_limpos_upas.csv`
 
-Baixe manualmente no Portal de Dados Abertos da PBH os arquivos de "Despesas Orçamentárias" (2020–2025).
+---
 
-Crie a pasta dados_oficiais na raiz do projeto e coloque todos os arquivos CSV baixados dentro dela.
+### 2️⃣ Análises Finais e Geração de Gráficos
 
-Execute o script de preparo financeiro:
+#### Análise de Texto (NLP):
+- Requer: `dados_limpos_upas.csv`
+- Execute:
+  ```sh
+  python analise_nlp.py
+  ```
+- **Saída:** Imagens Bi/Tri-grams e LDA em `resultados_nlp/`
 
-python preparar_dados_reais.py
+#### Gráficos Visuais:
+- Requer: `dados_limpos_upas.csv`
+- Execute:
+  ```sh
+  python analise_visual.py
+  ```
+- **Saída:** Gráficos de ranking, volume e evolução temporal em `resultados_visuais/`
 
+#### Correlação Financeira:
+- Requer: `dados_limpos_upas.csv` e os arquivos `dados_investimentos_*.csv`
+- Configure o modo (`GERAL` ou `HOB`) em `analise_correlacao.py`
+- Execute:
+  ```sh
+  python analise_correlacao.py
+  ```
+- **Saída:** Gráficos `correlacao_geral.png` e `correlacao_hob.png`
 
+---
 
+## ⚠️ Avisos Importantes
 
-Resultado: Isso gera os arquivos dados_investimentos_geral.csv e dados_investimentos_hob.csv na raiz, necessários para a correlação.
+- Os datasets brutos originais da PBH **NÃO estão incluídos** devido à limitação de 100MB por arquivo do GitHub.
+- O projeto é totalmente reprodutível se os dados oficiais forem baixados conforme as instruções.
+- Os arquivos intermediários e finais (CSVs leves) **estão inclusos** no repositório.
 
-B. Dados de Reviews (Coleta e Limpeza):
+---
 
-Execute o script de coleta de reviews do Google Maps:
+## 📄 Artigo Científico
 
-python scraper_engine.py
+O artigo gerado a partir destas análises (`artigo_final.tex`) está disponível na raiz do projeto.
 
+---
 
+## 👨‍💻 Autor
 
-
-Execute o script de limpeza e tratamento de datas (NLP Básico). Este passo é crucial:
-
-python processamento.py
-
-
-
-
-Resultado: Isso gera o arquivo dados_limpos_upas.csv, unindo reviews e datas, que será a base de todas as análises subsequentes.
-
-Etapa 2: Análises Finais e Gráficos (Dependem da Etapa 1)
-
-Análise de Texto (NLP):
-(Requer dados_limpos_upas.csv)
-
-python analise_nlp.py
-
-
-
-
-Resultado: Imagens de Bi/Tri-grams e Modelagem de Tópicos (LDA) salvas em resultados_nlp/.
-
-Geração de Gráficos Visuais (Rankings, Tempo):
-(Requer dados_limpos_upas.csv)
-
-python analise_visual.py
-
-
-
-
-Resultado: Todos os gráficos de ranking, volume e evolução temporal salvos em resultados_visuais/.
-
-Correlação Financeira:
-(Requer dados_limpos_upas.csv E os arquivos dados_investimentos_*.csv)
-
-Para rodar a análise Geral, abra analise_correlacao.py e defina MODO_ANALISE = "GERAL".
-Para rodar a análise HOB, defina MODO_ANALISE = "HOB".
-
-python analise_correlacao.py
-
-
-
-
-Resultado: Gráficos correlacao_geral.png e correlacao_hob.png gerados.
-
-⚠️ Aviso Importante sobre Limitações
-
-Os datasets brutos originais da PBH (Despesas Orçamentárias) NÃO estão incluídos no repositório devido à limitação de 100MB por arquivo do GitHub.
-
-O projeto é totalmente reprodutível se os dados oficiais forem baixados conforme a Etapa 1.
-
-Os arquivos de dados finais e intermediários (CSV leves) estão incluídos no repositório.
-
-📄 Artigo Científico
-
-O artigo gerado a partir destas análises (artigo_final.tex) está disponível na raiz do projeto.
-
-👨‍💻 Autor
-
-Cleidimar Lacerda dos Passos
-
-Universidade Federal de Viçosa (UFV)
-
-cleidimar.passos@ufv.br
+**Cleidimar Lacerda dos Passos**  
+Universidade Federal de Viçosa (UFV)  
+[cleidimar.passos@ufv.br](mailto:cleidimar.passos@ufv.br)
 
 <sub>Projeto acadêmico • Dados públicos • Uso exclusivamente educacional</sub>
