@@ -51,12 +51,12 @@ Explora-se a correlação entre a satisfação do cidadão (avaliações do Goog
 
 3. **Execute a coleta de dados (opcional)**
     ```bash
-    python src/coleta_reviews.py
+    python coleta_reviews.py
     ```
 
 4. **Execute as análises**
     ```bash
-    python src/analise_dados.py
+    python analise_dados.py
     ```
 
 ---
